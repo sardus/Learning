@@ -1,13 +1,22 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-void main() {
-    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-    // to see how IntelliJ IDEA suggests fixing it.
-    IO.println(String.format("Hello and welcome!"));
+//Примитивные типы данных
 
-    for (int i = 1; i <= 5; i++) {
-        //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-        // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        IO.println("i = " + i);
-    }
+void main() {
+    byte b = 13;
+    short sh = 31542;
+    int i = 56784;
+    long l = 784555454;
+    float f =  0.15f;
+    double d = 0.2123445345d;
+    char c = 'c';
+    boolean bl = true;
+
+    System.out.println("Type variable byte = " + b);
+    System.out.println("Type variable short = " + sh);
+    System.out.println("Type variable int = " + i);
+    System.out.println("Type variable long = " + l);
+    System.out.println("Type variable float = " + f);
+    System.out.println("Type variable double = " + d);
+    System.out.println("Type variable char = " + c);
+    System.out.println("Type variable boolean = " + bl);
+
 }
