@@ -19,4 +19,14 @@ void main() {
     System.out.println("Type variable char = " + c);
     System.out.println("Type variable boolean = " + bl);
 
+    float fc = sh/b;
+    System.out.println("Переменная fc равна: " + fc);
+
+    double df = d/l;
+    System.out.println("Переменная df равна: " + df);
+
+    String s = "Тут будет ничего!";
+    System.out.println(s);
+
+
 }
