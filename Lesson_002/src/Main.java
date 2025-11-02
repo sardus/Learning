@@ -15,8 +15,6 @@ void main() {
     }
 
 
-
-
     switch (age) {
         case 23:
             System.out.println("Вам уже 18 или более - выможете спокойно проходить!");

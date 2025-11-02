@@ -1,13 +1,30 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-void main() {
-    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-    // to see how IntelliJ IDEA suggests fixing it.
-    IO.println(String.format("Hello and welcome!"));
+//Здесь будут отрабатываться циклы
 
-    for (int i = 1; i <= 5; i++) {
-        //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-        // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        IO.println("i = " + i);
+void main() {
+
+    int i;
+    int j = 5;
+    int count = 1;
+    String[] daysOfWeek = {"Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"};
+
+    for (i = 0; i <= 5; i++) {
+        System.out.println("Переменная i = " + i);
     }
+    System.out.println("\n");
+
+    while (j >= 0) {
+        System.out.println("Переменная j =  " + j);
+        j--;
+    }
+    System.out.println("\n");
+
+    for (String dw : daysOfWeek) {
+        System.out.println("Дни недели: " + dw);
+    }
+    System.out.println("\n");
+
+    do {
+        System.out.println("Переменная count =  " + count);
+        count++;
+    } while (count <= 5);
 }
