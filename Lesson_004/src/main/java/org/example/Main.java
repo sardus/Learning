@@ -11,7 +11,8 @@ public class Main {
         System.out.println("Введите ваше имя: ");
         String name = scanner.nextLine();
 
-        int age = readInt("Ввведите ваш возраст: ", "Возраст может быть только числом! И только целым числом!");
+        int age = readInt("Ввведите ваш возраст: ", "Возраст может быть только числом! " +
+                "И только целым числом!");
 
         String email = readEmail("Введите вашу электронную почту: ");
 
