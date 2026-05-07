@@ -19,9 +19,9 @@ public class Main {
         scanner.close();
     }
 
-    public static int readInt(String promt, String errorMessage) {
+    public static int readInt(String touchAge , String errorMessage) {
         while (true) {
-            System.out.println(promt);
+            System.out.println(touchAge);
             try {
                 int value = Integer.parseInt(scanner.nextLine());
                 if (value < 0) {
@@ -35,9 +35,9 @@ public class Main {
         }
     }
 
-    public static String readEmail(String promt) {
+    public static String readEmail(String touchEmail) {
         while (true) {
-            System.out.println(promt);
+            System.out.println(touchEmail);
             String email = scanner.nextLine().trim();
             if (email.contains("@") && email.indexOf('@') > 0 && email.indexOf('@') < email.length() - 1) {
                 return email;
