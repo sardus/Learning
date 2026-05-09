@@ -18,8 +18,7 @@ public class Main {
             int age = readInt("How old are you? ", "Age can't be negative.");
             String email = readEmail("What's your email? ");
 
-            User user = new User(name, age, email);
-            users.add(user);
+            users.add(new User(name, age, email));
         }
 
         System.out.println("\nAll registered users:");
