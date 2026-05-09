@@ -20,7 +20,7 @@ public class Main {
         scanner.close();
     }
 
-    public static int readInt(String touchAge , String errorMessage) {
+    public static int readInt(String touchAge, String errorMessage) {
         while (true) {
             System.out.println(touchAge);
             try {
@@ -40,10 +40,30 @@ public class Main {
         while (true) {
             System.out.println(touchEmail);
             String email = scanner.nextLine().trim();
-            if (email.contains("@") && email.indexOf('@') > 0 && email.indexOf('@') < email.length() - 1) {
-                return email;
+
+            if (!email.contains("@") || email.indexOf('@') <= 0 || email.indexOf('@') > +email.length() - 1) {
+                System.out.println("Email must contain '@' not at the start or end.");
+                continue;
             }
-            System.out.println("Please enter a valid email (must contain @, e.g., user@example.com).");
+            String domain = email.substring(email.indexOf('@') + 1);
+            if (!domain.contains(".") || domain.indexOf('.') == 0 || domain.indexOf('.') == domain.length() - 1) {
+                System.out.println("Domain must contain a dot (e.g., example.com).");
+                continue;
+            }
+
+            String[] validTlds = {".com", ".net", ".org", ".ru", ".io"};
+            boolean hasValidTLd = false;
+            for (String tld : validTlds) {
+                if (domain.endsWith(tld)) {
+                    hasValidTLd = true;
+                    break;
+                }
+            }
+            if (hasValidTLd) {
+                return email;
+            } else {
+                System.out.println("Please use a common domain like .com, .net, .org, .ru, or .io.");
+            }
         }
     }
 }
