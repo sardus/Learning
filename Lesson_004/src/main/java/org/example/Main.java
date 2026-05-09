@@ -47,7 +47,7 @@ public class Main {
             System.out.println(touchEmail);
             String email = scanner.nextLine().trim();
 
-            if (!email.contains("@") || email.indexOf('@') <= 0 || email.indexOf('@') > +email.length() - 1) {
+            if (!email.contains("@") || email.indexOf('@') <= 0 || email.indexOf('@') > email.length() - 1) {
                 System.out.println("Email must contain '@' not at the start or end.");
                 continue;
             }
@@ -57,9 +57,9 @@ public class Main {
                 continue;
             }
 
-            String[] validTlds = {".com", ".net", ".org", ".ru", ".io"};
+            String[] validLds = {".com", ".net", ".org", ".ru", ".io"};
             boolean hasValidTLd = false;
-            for (String tld : validTlds) {
+            for (String tld : validLds) {
                 if (domain.endsWith(tld)) {
                     hasValidTLd = true;
                     break;
