@@ -1,9 +1,9 @@
 package org.example;
 
 public class User {
-    private String name;
-    private int age;
-    private String email;
+    private final String name;
+    private final int age;
+    private final String email;
 
     public User(String name, int age, String email) {
         this.name = name;
@@ -25,6 +25,6 @@ public class User {
 
     @Override
     public String toString(){
-        return "User{Your name='" + name + "', Your age=" + age + ", Your email='" + email + "'}";
+        return "User{Your name='" + getName() + "', Your age=" + getAge() + ", Your email='" + getEmail() + "'}";
     }
 }
