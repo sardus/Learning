@@ -8,16 +8,22 @@ public class Main {
 
     static void main() {
 
-        System.out.println("Введите ваше имя: ");
-        String name = scanner.nextLine();
+        System.out.println("=== User Registration ===");
 
-        int age = readInt("Ввведите ваш возраст: ", "Возраст может быть только числом! " +
-                "И только целым числом!");
+        String name = readString("What's your name? ");
+        int age = readInt("How old are you? ", "Age can't be negative.");
+        String email = readEmail("What's your email? ");
 
-        String email = readEmail("Введите вашу электронную почту: ");
+        User user = new User(name, age, email);
 
-        System.out.println("\nПривет, " + name + "! Твой возраст: " + age + ", твой email: " + email);
+        System.out.println("\nRegistration complete!");
+        System.out.println(user);
         scanner.close();
+    }
+
+    public static String readString(String prompt) {
+        System.out.print(prompt);
+        return scanner.nextLine().trim();
     }
 
     public static int readInt(String touchAge, String errorMessage) {
