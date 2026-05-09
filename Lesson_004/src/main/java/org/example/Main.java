@@ -25,6 +25,7 @@ public class Main {
         for (User u : users) {
             System.out.println(u);
         }
+        UserFileWriter.writeUsersToCsv(users, "users.csv");
         reader.close();
     }
 }
