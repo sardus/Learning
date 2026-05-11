@@ -15,8 +15,8 @@ public class Main {
 
         //Пробуем остановить программу если было введено слово stop вместо имени
         while(true){
-            System.out.println("\nEnter name or 'stop' to exit: ");
-            String name = reader.readString("").trim();
+            System.out.println("\nEnter name or word 'stop' to exit: ");
+            String name = readString("").trim();
 
             if("stop".equalsIgnoreCase(name)){
                 break;
