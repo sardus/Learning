@@ -2,12 +2,13 @@ package org.example;
 
 import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.util.List;
 
 public class UserFileWriter {
 
     public static void writeUsersToCsv(List<User> users, String filename) {
-        try (FileWriter writer = new FileWriter(filename)) {
+        try (FileWriter writer = new FileWriter(filename, StandardCharsets.UTF_8)) {
             writer.write("name,age,email\n");
 
             for (User user : users) {
