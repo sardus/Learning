@@ -13,7 +13,6 @@ public class Main {
 
         ArrayList<User> users = new ArrayList<>();
 
-        //Пробуем остановить программу если было введено слово stop вместо имени
         while(true){
             System.out.println("\nEnter name or word 'stop' to exit: ");
             String name = readString("").trim();
