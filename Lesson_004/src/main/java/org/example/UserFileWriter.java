@@ -16,7 +16,7 @@ public class UserFileWriter {
                 String email = escapeCsv(user.email());
                 writer.write(name + "," + user.age() + "," + email + "\n");
             }
-            System.out.println("Date saved to " + filename);
+            System.out.println("Date saved to " + filename + " (UTF-8)");
         } catch (IOException e) {
             System.err.println("Filed to write file: " + e.getMessage());
         }
