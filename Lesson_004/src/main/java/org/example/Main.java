@@ -13,8 +13,19 @@ public class Main {
 
         ArrayList<User> users = new ArrayList<>();
 
-        for (int i = 1; i <= 3; i++) {
-            String name = readString("What's your name? ");
+        //Пробуем остановить программу если было введено слово stop вместо имени
+        while(true){
+            System.out.println("\nEnter name or 'stop' to exit: ");
+            String name = reader.readString("").trim();
+
+            if("stop".equalsIgnoreCase(name)){
+                break;
+            }
+
+            if(name.isEmpty()){
+                System.out.println("Name can't be empty.");
+                continue;
+            }
             int age = readInt("How old are you? ", "Age can't be negative.");
             String email = readEmail("What's your email? ");
 
@@ -26,6 +37,7 @@ public class Main {
             System.out.println(u);
         }
         UserFileWriter.writeUsersToCsv(users, "users.csv");
+
         reader.close();
     }
 }
